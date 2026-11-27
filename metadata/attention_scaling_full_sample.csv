@@ -1,0 +1,5 @@
+asset,attention_measure,current_mean,current_sd,n,first_week,last_week,lagged_variable
+BTC,attention_change,0.0026448770821529055,6.7095107091730144,353,2020-01-19,2026-10-18,attention_change_lag1
+BTC,abnormal_attention4,-0.010715651579642013,0.24327502012021004,353,2020-01-19,2026-10-18,abnormal_attention4_lag1
+ETH,attention_change,0.0096329564589234633,6.5056383226852272,353,2020-01-19,2026-10-18,attention_change_lag1
+ETH,abnormal_attention4,-0.0082771591133841797,0.2805099867219924,353,2020-01-19,2026-10-18,abnormal_attention4_lag1

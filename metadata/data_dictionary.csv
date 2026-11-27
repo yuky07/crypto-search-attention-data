@@ -1,0 +1,124 @@
+file,variable,units,definition
+data/binance_daily_data.csv,asset,text,BTC or ETH asset identifier
+data/binance_daily_data.csv,pair,text,Binance spot pair; BTCUSDT or ETHUSDT
+data/binance_daily_data.csv,date,date,"UTC observation date, YYYY-MM-DD"
+data/binance_daily_data.csv,open,USDT per base unit,Daily opening spot price
+data/binance_daily_data.csv,high,USDT per base unit,Daily highest spot price
+data/binance_daily_data.csv,low,USDT per base unit,Daily lowest spot price
+data/binance_daily_data.csv,close,USDT per base unit,Daily closing spot price
+data/binance_daily_data.csv,base_volume,BTC or ETH,Total executed base quantity in the day or week
+data/binance_daily_data.csv,quote_volume,USDT,Total executed quote value in the day or week
+data/binance_daily_data.csv,trade_count,count,"Number of exchange-reported trades, not blockchain transactions"
+data/binance_daily_data.csv,taker_buy_base,BTC or ETH,Executed base quantity initiated by taker buyers
+data/binance_daily_data.csv,taker_buy_quote,USDT,Executed quote value initiated by taker buyers
+data/binance_daily_data.csv,daily_return_pct,percent log return,100 times log daily close divided by previous daily close; first row per asset missing
+data/binance_daily_data.csv,week_start,date,"Sunday beginning the UTC week, YYYY-MM-DD"
+data/binance_weekday_volume.csv,asset,text,BTC or ETH asset identifier
+data/binance_weekday_volume.csv,week_start,date,"Sunday beginning the UTC week, YYYY-MM-DD"
+data/binance_weekday_volume.csv,weekday_quote_volume,USDT,Binance quote volume summed over Monday–Friday within the labelled week
+data/binance_weekday_volume.csv,weekday_count,count,Number of Monday–Friday observations; five in the retained sample
+data/binance_weekday_volume.csv,log_weekday_quote_volume,natural log USDT,Natural logarithm of Monday–Friday quote volume
+data/binance_weekday_volume.csv,log_weekday_quote_volume_lag1,natural log USDT,One calendar week earlier: Natural logarithm of Monday–Friday quote volume
+data/binance_weekday_volume.csv,log_weekday_quote_volume_lag2,natural log USDT,Two calendar weeks earlier: Natural logarithm of Monday–Friday quote volume
+data/binance_weekday_volume.csv,next_week_log_weekday_quote_volume,natural log USDT,Following Sunday–Saturday week: Natural logarithm of Monday–Friday quote volume
+data/bitcoin_daily_close_with_2019_history.csv,date,date,"UTC observation date, YYYY-MM-DD"
+data/bitcoin_daily_close_with_2019_history.csv,btc_close_usdt,USDT per BTC,Bitcoin daily closing spot price including pre-2020 history
+data/google_trends_weekly.csv,asset,text,BTC or ETH asset identifier
+data/google_trends_weekly.csv,week_start,date,"Sunday beginning the UTC week, YYYY-MM-DD"
+data/google_trends_weekly.csv,google_index,relative index points,Asset-specific linked Google Trends index; full-history maximum equals 100
+data/market_states.csv,week_start,date,"Sunday beginning the UTC week, YYYY-MM-DD"
+data/market_states.csv,state_cutoff,date,Saturday immediately preceding the search week
+data/market_states.csv,four_week_begin,date,Saturday 28 days before state_cutoff
+data/market_states.csv,btc_close_cutoff,USDT per BTC,Bitcoin close on state_cutoff
+data/market_states.csv,btc_close_four_week_begin,USDT per BTC,Bitcoin close 28 days before state_cutoff
+data/market_states.csv,btc_prior_4week_return_pct,percent log return,100 ln(BTC close at cutoff / BTC close 28 days earlier)
+data/market_states.csv,bull_4week,binary,1 for positive prior four-week BTC return; 0 otherwise
+data/market_states.csv,twelve_week_begin,date,Saturday 84 days before state_cutoff
+data/market_states.csv,btc_close_twelve_week_begin,USDT per BTC,Bitcoin close 84 days before state_cutoff
+data/market_states.csv,btc_prior_12week_return_pct,percent log return,100 ln(BTC close at cutoff / BTC close 84 days earlier)
+data/market_states.csv,bull_12week,binary,1 for positive prior twelve-week BTC return; 0 otherwise
+data/market_states.csv,market_state_4week,text,Bull or Bear according to bull_4week
+data/market_states.csv,market_state_12week,text,Bull or Bear according to bull_12week
+data/weekly_analysis_data.csv,week_start,date,"Sunday beginning the UTC week, YYYY-MM-DD"
+data/weekly_analysis_data.csv,market_days,count,Number of daily market observations within the week; seven in the analysis sample
+data/weekly_analysis_data.csv,daily_return_count,count,Number of finite daily returns in the week; seven in the analysis sample
+data/weekly_analysis_data.csv,quote_volume,USDT,Total executed quote value in the day or week
+data/weekly_analysis_data.csv,base_volume,BTC or ETH,Total executed base quantity in the day or week
+data/weekly_analysis_data.csv,trade_count,count,"Number of exchange-reported trades, not blockchain transactions"
+data/weekly_analysis_data.csv,taker_buy_base,BTC or ETH,Executed base quantity initiated by taker buyers
+data/weekly_analysis_data.csv,taker_buy_quote,USDT,Executed quote value initiated by taker buyers
+data/weekly_analysis_data.csv,weekly_return_pct,percent log return,Sum of seven daily percentage log returns
+data/weekly_analysis_data.csv,within_week_volatility_pct,percentage points,Sample standard deviation of seven daily percentage log returns
+data/weekly_analysis_data.csv,initiation_pressure_pp,percentage points,100 times (2 times taker-buy base divided by total base minus 1)
+data/weekly_analysis_data.csv,quote_initiation_pressure_pp,percentage points,100 times (2 times taker-buy quote divided by total quote minus 1)
+data/weekly_analysis_data.csv,log_quote_volume,natural log USDT,Natural logarithm of weekly quote volume in unscaled USDT
+data/weekly_analysis_data.csv,log_base_volume,natural log base quantity,Natural logarithm of weekly BTC or ETH base volume
+data/weekly_analysis_data.csv,log_trade_count,natural log count,Natural logarithm of weekly trade count
+data/weekly_analysis_data.csv,google_index,relative index points,Asset-specific linked Google Trends index; full-history maximum equals 100
+data/weekly_analysis_data.csv,log_quote_volume_lag1,natural log USDT,One calendar week earlier: Natural logarithm of weekly quote volume in unscaled USDT
+data/weekly_analysis_data.csv,log_quote_volume_lag2,natural log USDT,Two calendar weeks earlier: Natural logarithm of weekly quote volume in unscaled USDT
+data/weekly_analysis_data.csv,log_base_volume_lag1,natural log base quantity,One calendar week earlier: Natural logarithm of weekly BTC or ETH base volume
+data/weekly_analysis_data.csv,log_base_volume_lag2,natural log base quantity,Two calendar weeks earlier: Natural logarithm of weekly BTC or ETH base volume
+data/weekly_analysis_data.csv,log_trade_count_lag1,natural log count,One calendar week earlier: Natural logarithm of weekly trade count
+data/weekly_analysis_data.csv,log_trade_count_lag2,natural log count,Two calendar weeks earlier: Natural logarithm of weekly trade count
+data/weekly_analysis_data.csv,initiation_pressure_pp_lag1,percentage points,One calendar week earlier: 100 times (2 times taker-buy base divided by total base minus 1)
+data/weekly_analysis_data.csv,initiation_pressure_pp_lag2,percentage points,Two calendar weeks earlier: 100 times (2 times taker-buy base divided by total base minus 1)
+data/weekly_analysis_data.csv,quote_initiation_pressure_pp_lag1,percentage points,One calendar week earlier: 100 times (2 times taker-buy quote divided by total quote minus 1)
+data/weekly_analysis_data.csv,quote_initiation_pressure_pp_lag2,percentage points,Two calendar weeks earlier: 100 times (2 times taker-buy quote divided by total quote minus 1)
+data/weekly_analysis_data.csv,weekly_return_pct_lag1,percent log return,One calendar week earlier: Sum of seven daily percentage log returns
+data/weekly_analysis_data.csv,weekly_return_pct_lag2,percent log return,Two calendar weeks earlier: Sum of seven daily percentage log returns
+data/weekly_analysis_data.csv,within_week_volatility_pct_lag1,percentage points,One calendar week earlier: Sample standard deviation of seven daily percentage log returns
+data/weekly_analysis_data.csv,within_week_volatility_pct_lag2,percentage points,Two calendar weeks earlier: Sample standard deviation of seven daily percentage log returns
+data/weekly_analysis_data.csv,attention_change,index points,Google index minus the previous-week index; unstandardized
+data/weekly_analysis_data.csv,attention_change_lag1,index points,One calendar week earlier: Google index minus the previous-week index; unstandardized
+data/weekly_analysis_data.csv,next_week_log_quote_volume,natural log USDT,Following Sunday–Saturday week: Natural logarithm of weekly quote volume in unscaled USDT
+data/weekly_analysis_data.csv,next_week_log_base_volume,natural log base quantity,Following Sunday–Saturday week: Natural logarithm of weekly BTC or ETH base volume
+data/weekly_analysis_data.csv,next_week_log_trade_count,natural log count,Following Sunday–Saturday week: Natural logarithm of weekly trade count
+data/weekly_analysis_data.csv,next_week_initiation_pressure_pp,percentage points,Following Sunday–Saturday week: 100 times (2 times taker-buy base divided by total base minus 1)
+data/weekly_analysis_data.csv,next_week_quote_initiation_pressure_pp,percentage points,Following Sunday–Saturday week: 100 times (2 times taker-buy quote divided by total quote minus 1)
+data/weekly_analysis_data.csv,next_week_weekly_return_pct,percent log return,Following Sunday–Saturday week: Sum of seven daily percentage log returns
+data/weekly_analysis_data.csv,abnormal_attention4,natural log ratio,ln(current Google index divided by arithmetic mean of previous four weekly indices); unstandardized
+data/weekly_analysis_data.csv,abnormal_attention4_lag1,natural log ratio,One calendar week earlier: ln(current Google index divided by arithmetic mean of previous four weekly indices); unstandardized
+data/weekly_analysis_data.csv,asset,text,BTC or ETH asset identifier
+data/weekly_market_source_data.csv,week_start,date,"Sunday beginning the UTC week, YYYY-MM-DD"
+data/weekly_market_source_data.csv,market_days,count,Number of daily market observations within the week; seven in the analysis sample
+data/weekly_market_source_data.csv,daily_return_count,count,Number of finite daily returns in the week; seven in the analysis sample
+data/weekly_market_source_data.csv,quote_volume,USDT,Total executed quote value in the day or week
+data/weekly_market_source_data.csv,base_volume,BTC or ETH,Total executed base quantity in the day or week
+data/weekly_market_source_data.csv,trade_count,count,"Number of exchange-reported trades, not blockchain transactions"
+data/weekly_market_source_data.csv,taker_buy_base,BTC or ETH,Executed base quantity initiated by taker buyers
+data/weekly_market_source_data.csv,taker_buy_quote,USDT,Executed quote value initiated by taker buyers
+data/weekly_market_source_data.csv,weekly_return_pct,percent log return,Sum of seven daily percentage log returns
+data/weekly_market_source_data.csv,within_week_volatility_pct,percentage points,Sample standard deviation of seven daily percentage log returns
+data/weekly_market_source_data.csv,initiation_pressure_pp,percentage points,100 times (2 times taker-buy base divided by total base minus 1)
+data/weekly_market_source_data.csv,quote_initiation_pressure_pp,percentage points,100 times (2 times taker-buy quote divided by total quote minus 1)
+data/weekly_market_source_data.csv,log_quote_volume,natural log USDT,Natural logarithm of weekly quote volume in unscaled USDT
+data/weekly_market_source_data.csv,log_base_volume,natural log base quantity,Natural logarithm of weekly BTC or ETH base volume
+data/weekly_market_source_data.csv,log_trade_count,natural log count,Natural logarithm of weekly trade count
+data/weekly_market_source_data.csv,google_index,relative index points,Asset-specific linked Google Trends index; full-history maximum equals 100
+data/weekly_market_source_data.csv,asset,text,BTC or ETH asset identifier
+metadata/attention_scaling_full_sample.csv,asset,text,BTC or ETH asset identifier
+metadata/attention_scaling_full_sample.csv,attention_measure,text,Name of the current attention measure
+metadata/attention_scaling_full_sample.csv,current_mean,measure units,Mean of the current attention measure for this asset and full estimation sample
+metadata/attention_scaling_full_sample.csv,current_sd,measure units,Sample standard deviation of current attention; same moments apply to current and lagged terms
+metadata/attention_scaling_full_sample.csv,n,count,Number of observations used for full-sample scaling
+metadata/attention_scaling_full_sample.csv,first_week,date,First search week in this scaling sample
+metadata/attention_scaling_full_sample.csv,last_week,date,Last search week in this scaling sample
+metadata/attention_scaling_full_sample.csv,lagged_variable,text,Lagged attention variable using the same current-attention scaling moments
+metadata/binance_source_archives.csv,filename,text,Original Binance archive basename
+metadata/binance_source_archives.csv,source_url,URL,Original Binance source archive URL
+metadata/binance_source_archives.csv,sha256,SHA-256,Recorded hexadecimal checksum of source file bytes
+metadata/binance_source_archives.csv,purpose,text,Main market data or additional market-state prehistory
+metadata/google_export_ledger.csv,asset,text,BTC or ETH asset identifier
+metadata/google_export_ledger.csv,repository_file,path,Relative path of the renamed source export in this repository
+metadata/google_export_ledger.csv,original_filename,text,Original supplied Google export basename
+metadata/google_export_ledger.csv,start,date,Google export requested window start
+metadata/google_export_ledger.csv,end,date,Google export requested window end; complete weeks required
+metadata/google_export_ledger.csv,extraction,text,Extraction label recorded in the study source ledger
+metadata/google_export_ledger.csv,sha256,SHA-256,Recorded hexadecimal checksum of source file bytes
+metadata/google_export_ledger.csv,factor,multiplier,Cumulative overlap-linking factor before full-history renormalization
+metadata/google_export_ledger.csv,ratio,ratio,Median positive overlap ratio to preceding window
+metadata/google_export_ledger.csv,overlap,count,Number of positive overlap observations used in linking
+metadata/google_export_ledger.csv,median_error,relative disagreement,Median relative overlap discrepancy recorded by the linking audit
+sources/google_exports/*.csv,Time,date,Original Google export date for the beginning of the reported week
+sources/google_exports/*.csv,Bitcoin or Ethereum,window-specific relative index,Original source index prior to linking; exact header retained from supplied export
